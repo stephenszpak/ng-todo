@@ -5,3 +5,4 @@
     - bower install
     - npm install
 * http-server
+
