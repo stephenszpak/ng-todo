@@ -1,4 +1,4 @@
-"use script";
+"use strict";
 
 app.controller("ItemNewCtrl", function($scope, $location, ItemFactory) {
 	$scope.newTask = {};
@@ -6,8 +6,8 @@ app.controller("ItemNewCtrl", function($scope, $location, ItemFactory) {
 		$scope.addNewItem = function() {
 		$scope.newTask.isCompleted = false;
 		ItemFactory.postNewItem($scope.newTask).then(function(itemId) {
-			$location.url("/items/list")
+			$location.url("/items/list");
 			$scope.newTask = "";
 		});
-	}
+	};
 });

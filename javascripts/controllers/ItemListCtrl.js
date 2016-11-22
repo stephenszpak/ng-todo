@@ -1,4 +1,4 @@
-"use script";
+"use strict";
 
 app.controller("ItemListCtrl", function($scope, ItemFactory) {
 	
@@ -16,7 +16,7 @@ app.controller("ItemListCtrl", function($scope, ItemFactory) {
 		console.log("you deleted me");
 		ItemFactory.deleteItem(itemId).then(function(response) {
 			getItems();
-		})
+		});
 	};
 
 	$scope.inputChange = function(thingy) {

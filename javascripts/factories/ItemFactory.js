@@ -10,14 +10,14 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG) {
 				Object.keys(response).forEach(function(key) {
 					response[key].id = key;
 					items.push(response[key]);
-				})
+				});
 				resolve(items);
 			})
 			.error(function(errorResponse) {
 				reject(errorResponse);
 			});
 		});
-	}
+	};
 
 	var postNewItem = function(newItem) {
 		return $q((resolve, reject) => {

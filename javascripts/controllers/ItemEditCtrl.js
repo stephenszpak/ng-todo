@@ -5,7 +5,7 @@ app.controller("ItemEditCtrl", function($scope, $location, $routeParams, ItemFac
 	let itemId = $routeParams.id;
 
 	ItemFactory.getSingleItem(itemId).then(function(oneItem) {
-		oneItem.id = itemId
+		oneItem.id = itemId;
 		$scope.newTask = oneItem;
 	});
 
@@ -14,5 +14,5 @@ app.controller("ItemEditCtrl", function($scope, $location, $routeParams, ItemFac
 			$scope.newtask = {};
 			$location.url("/items/list");
 		});
-	}
+	};
 });
